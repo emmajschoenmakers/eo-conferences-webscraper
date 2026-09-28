@@ -37,14 +37,27 @@ def fmt_dates(s, en):
     return f"{s.day} {s:%b %Y} – {en.day} {en:%b %Y}"
 
 
+def deadline_line(c):
+    label = "Registration deadline" if c.get("type") == "hackathon" else "Abstract deadline"
+    d = c.get("deadline")
+    if not d:
+        return f'<p class="dl">{label}: not announced yet</p>'
+    try:
+        dd = as_date(d)
+        text = f"{dd.day} {dd:%b %Y}" + (" (closed)" if dd < dt.date.today() else "")
+    except ValueError:
+        text = str(d)
+    return f'<p class="dl">{label}: {e(text)}</p>'
+
+
 def row(c):
     tags = "".join(f'<span class="tag">{e(TOPICS.get(t, t))}</span>' for t in c.get("topics", []))
-    deadline = f'<p class="dl">Abstract deadline: {e(str(c["deadline"]))}</p>' if c.get("deadline") else ""
+    deadline = deadline_line(c)
     note = f'<p class="note">{e(c["note"])}</p>' if c.get("note") else ""
     place = ", ".join(x for x in (c.get("city"), c.get("country")) if x)
     search = " ".join([c["name"], place, " ".join(c.get("topics", []))]).lower()
     return (
-        f'<li class="ev" data-region="{e(c.get("region", "world"))}" '
+        f'<li class="ev" data-type="{e(c.get("type", "conference"))}" data-region="{e(c.get("region", "world"))}" '
         f'data-topics="{e(" ".join(c.get("topics", [])))}" data-search="{e(search)}">\n'
         f'  <time datetime="{c["start"].isoformat()}">{e(fmt_dates(c["start"], c["end"]))}</time>\n'
         f'  <div><h3><a href="{e(c["url"])}" rel="noopener">{e(c["name"])}</a></h3>\n'
@@ -64,6 +77,10 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Iowan Old St
 main{max-width:52rem;margin:0 auto;padding:2.5rem 1.25rem 4rem}
 h1{font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.15;margin:0 0 .5rem}
 .lead{color:var(--mute);margin:0 0 1.75rem;max-width:40rem}
+.tabs{display:flex;gap:1.5rem;border-bottom:1px solid var(--line);margin-bottom:1.25rem}
+.tabs button{font:600 1rem system-ui,sans-serif;background:none;border:0;border-bottom:3px solid transparent;color:var(--mute);padding:.5rem 0;margin-bottom:-1px;cursor:pointer}
+.tabs button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--acc)}
+.tabs span{font-weight:400;color:var(--mute)}
 .controls{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.25rem}
 .controls input,.controls select{font:inherit;padding:.5rem .7rem;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink)}
 .controls input{flex:1 1 14rem}
@@ -85,22 +102,31 @@ footer{margin-top:2rem;color:var(--mute);font-size:.85rem}
 <body><main>
 <h1>Earth observation, methane &amp; emissions conferences</h1>
 <p class="lead">Upcoming conferences on Earth observation, greenhouse gases, methane, emissions and machine learning for the Earth system. Europe first, plus major events worldwide.</p>
+<div class="tabs" role="tablist">
+<button role="tab" id="tab-conference" data-tab="conference" aria-selected="true">Conferences <span>__NCONF__</span></button>
+<button role="tab" id="tab-hackathon" data-tab="hackathon" aria-selected="false">Hackathons <span>__NHACK__</span></button>
+</div>
 <div class="controls">
 <input id="q" type="search" placeholder="Search name, city, country" aria-label="Search">
 <select id="region" aria-label="Region"><option value="">All regions</option>__REGIONS__</select>
 <select id="topic" aria-label="Topic"><option value="">All topics</option>__TOPICS__</select>
 </div>
 <ul id="list">__ROWS__</ul>
-<p class="empty" id="empty" hidden>No conferences match these filters.</p>
-<footer>__COUNT__ upcoming events. Updated __TODAY__. Past events are removed automatically.</footer>
+<p class="empty" id="empty" hidden>Nothing to show here yet.</p>
+<footer>__COUNT__ upcoming events in total. Updated __TODAY__. Past events are removed automatically.</footer>
 </main>
 <script>
 const q=document.getElementById('q'),r=document.getElementById('region'),t=document.getElementById('topic');
 const evs=[...document.querySelectorAll('.ev')],empty=document.getElementById('empty');
+const tabs=[...document.querySelectorAll('.tabs button')];
+let tab=location.hash==='#hackathons'?'hackathon':'conference';
 function f(){const s=q.value.trim().toLowerCase();let n=0;
-evs.forEach(e=>{const ok=(!s||e.dataset.search.includes(s))&&(!r.value||e.dataset.region===r.value)&&(!t.value||e.dataset.topics.split(' ').includes(t.value));e.hidden=!ok;if(ok)n++});
+tabs.forEach(b=>b.setAttribute('aria-selected',b.dataset.tab===tab));
+evs.forEach(e=>{const ok=e.dataset.type===tab&&(!s||e.dataset.search.includes(s))&&(!r.value||e.dataset.region===r.value)&&(!t.value||e.dataset.topics.split(' ').includes(t.value));e.hidden=!ok;if(ok)n++});
 empty.hidden=n>0}
+tabs.forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.tab;history.replaceState(null,'',tab==='hackathon'?'#hackathons':'#');f()}));
 [q,r,t].forEach(x=>x.addEventListener('input',f));
+f();
 </script></body></html>"""
 
 
@@ -113,6 +139,8 @@ def main():
     page = (PAGE.replace("__REGIONS__", opts(REGIONS)).replace("__TOPICS__", opts(TOPICS))
             .replace("__ROWS__", "\n".join(row(c) for c in items))
             .replace("__COUNT__", str(len(items)))
+            .replace("__NCONF__", str(sum(c.get("type", "conference") != "hackathon" for c in items)))
+            .replace("__NHACK__", str(sum(c.get("type") == "hackathon" for c in items)))
             .replace("__TODAY__", f"{dt.date.today():%d %b %Y}"))
     out = ROOT / "docs"
     out.mkdir(exist_ok=True)

@@ -17,26 +17,36 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "conferences.yml"
 MODEL = os.environ.get("CLAUDE_MODEL", "claude-sonnet-5")
 
-PROMPT = """Today is {today}. Use web search to find conferences, symposia, workshops and summer
-schools starting between {today} and {horizon} on these subjects: Earth observation and remote
-sensing, methane, greenhouse gases, emissions monitoring, and machine learning / deep learning / AI
-applied to these (or to Earth science generally). Prioritise Europe, but include major events worldwide.
+PROMPT = """Today is {today}. Use web search to find conferences, symposia, workshops, summer schools
+and hackathons starting between {today} and {horizon} on: Earth observation and remote sensing,
+methane, greenhouse gases, emissions monitoring, and machine learning / deep learning / AI applied to
+these (or to Earth science generally). Prioritise Europe, but include major events worldwide.
+
+Search these organisations' event pages specifically, one at a time:
+WMO (World Meteorological Organization), ICOS (Integrated Carbon Observation System),
+ESA (for example the Living Planet Symposium, Phi-Week, EO Open Science, ESA training courses),
+ECMWF, EUMETSAT, and ESA PhiLab / Phi-Lab. Also search generally for EO and climate hackathons.
+
+Set "type" to "hackathon" for hackathons, challenges and datathons, otherwise "conference".
+For every event look for the abstract submission deadline (registration or application deadline for
+hackathons) and include it if published, otherwise null.
 
 Already listed (do not repeat): {known}
 
 Only include events whose official page you actually found, with confirmed dates. Do not guess.
 Reply with ONLY a JSON array (no prose, no code fences). Each item:
-{{"name": str, "start": "YYYY-MM-DD", "end": "YYYY-MM-DD", "city": str, "country": str,
-"region": "europe" or "world", "topics": subset of ["eo","methane","ghg","emissions","ai"],
-"url": official page, "deadline": abstract deadline as YYYY-MM-DD or null}}"""
+{{"name": str, "type": "conference" or "hackathon", "start": "YYYY-MM-DD", "end": "YYYY-MM-DD",
+"city": str, "country": str, "region": "europe" or "world",
+"topics": subset of ["eo","methane","ghg","emissions","ai"],
+"url": official page, "deadline": "YYYY-MM-DD" or null}}"""
 
 
 def ask(prompt):
     client = anthropic.Anthropic()
     messages = [{"role": "user", "content": prompt}]
-    tools = [{"type": "web_search_20250305", "name": "web_search", "max_uses": 15}]
+    tools = [{"type": "web_search_20250305", "name": "web_search", "max_uses": 30}]
     for _ in range(6):  # continue if the server pauses a long search turn
-        resp = client.messages.create(model=MODEL, max_tokens=4000, tools=tools, messages=messages)
+        resp = client.messages.create(model=MODEL, max_tokens=8000, tools=tools, messages=messages)
         if resp.stop_reason != "pause_turn":
             return "".join(b.text for b in resp.content if b.type == "text")
         messages = [messages[0], {"role": "assistant", "content": resp.content}]
@@ -68,6 +78,8 @@ def main():
                 "topics": [t for t in c.get("topics", []) if t in {"eo", "methane", "ghg", "emissions", "ai"}],
                 "url": c["url"],
             }
+            if c.get("type") == "hackathon":
+                entry["type"] = "hackathon"
             if c.get("deadline"):
                 entry["deadline"] = c["deadline"]
             existing.append(entry)
