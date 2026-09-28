@@ -6,7 +6,7 @@ import yaml
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 TOPICS = {"eo": "Earth observation", "methane": "Methane", "ghg": "Greenhouse gases",
-          "emissions": "Emissions", "ai": "ML / AI"}
+          "emissions": "Emissions", "ai": "ML / AI","FM" : "Foundation Models"}
 REGIONS = {"europe": "Europe", "world": "Rest of world"}
 e = html.escape
 
@@ -68,7 +68,7 @@ def row(c):
 PAGE = """<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Earth Observation &amp; Emissions onferences</title>
+<title>Earth Observation &amp; Emissions Conferences</title>
 <style>
 :root{--bg:#eef2f5;--ink:#14212b;--mute:#586773;--line:#cbd5dc;--card:#fff;--acc:#0b6e79;--hot:#c2410c}
 @media (prefers-color-scheme:dark){:root{--bg:#0f1a21;--ink:#e6edf1;--mute:#93a3ae;--line:#26363f;--card:#16252e;--acc:#5cc2cc;--hot:#fb923c}}
@@ -101,7 +101,7 @@ footer{margin-top:2rem;color:var(--mute);font-size:.85rem}
 </style></head>
 <body><main>
 <h1>Earth observation, Methane &amp; Emissions Conferences</h1>
-<p class="lead">Upcoming conferences and hackathons on Earth observation, greenhouse gases, methane and/or emissions & AI (DL,ML, Agentic AI, Foundation Models) for the Earth system. Europe focus, plus major events worldwide.</p>
+<p class="lead">Upcoming conferences and hackathons on Earth Observation, greenhouse gases, methane and/or emissions & AI (DL,ML, Agentic AI, Foundation Models) for the Earth system. Europe focus, plus major events worldwide.</p>
 <div class="tabs" role="tablist">
 <button role="tab" id="tab-conference" data-tab="conference" aria-selected="true">Conferences <span>__NCONF__</span></button>
 <button role="tab" id="tab-hackathon" data-tab="hackathon" aria-selected="false">Hackathons <span>__NHACK__</span></button>
