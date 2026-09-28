@@ -1,28 +1,196 @@
-- name: AGU Fall Meeting 2026
-  start: 2026-12-07
-  end: 2026-12-11
-  city: San Francisco
-  country: USA
+- name: ESA Earth Observation Satellite Systems Design Training Course 2026
+  start: 2026-09-28
+  end: 2026-10-09
+  city: Transinne
+  country: Belgium
+  region: europe
+  topics:
+  - eo
+  url: https://www.esa.int/Education/ESA_Academy/Apply_for_Earth_Observation_Satellite_Systems_Design_Training
+  deadline: '2026-06-21'
+- name: 10th AfriGEO Symposium
+  start: 2026-10-05
+  end: 2026-10-08
+  city: Abuja
+  country: Nigeria
   region: world
-  topics: [eo, ghg, emissions, ai]
-  url: https://www.agu.org/annual-meeting
-  deadline: 2026-08-05
+  topics:
+  - eo
+  - ai
+  url: https://earthobservations.org/about-us/news/10th-afrigeo-symposium-registration-now-open
+- name: Open-Earth-Monitor Cyberinfrastructure (OEMC) Global Workshop 2026
+  start: 2026-10-07
+  end: 2026-10-09
+  city: Barcelona
+  country: Spain
+  region: europe
+  topics:
+  - eo
+  - ai
+  url: https://earthmonitor.org/global-workshop-2026/
+  deadline: '2026-04-01'
+- name: 47th Asian Conference on Remote Sensing (ACRS 2026)
+  start: 2026-10-12
+  end: 2026-10-16
+  city: New Delhi
+  country: India
+  region: world
+  topics:
+  - eo
+  - ai
+  url: https://acrs2026.in/
+- name: International Conference on Remote Sensing and Geoinformation (RESG2026)
+  start: 2026-10-15
+  end: 2026-10-18
+  city: Beijing
+  country: China
+  region: world
+  topics:
+  - eo
+  - ghg
+  url: https://www.elsevier.com/en-xs/events/conferences/all/remote-sensing-and-geoinformation
+  deadline: '2026-04-24'
+- name: ISPRS STEP Summer School (at ACRS 2026)
+  start: 2026-10-17
+  end: 2026-10-21
+  city: New Delhi
+  country: India
+  region: world
+  topics:
+  - eo
+  url: https://acrs2026.in/summer-school.html
+- name: Agentic AI for Earth Observation Workshop
+  start: 2026-10-19
+  end: 2026-10-21
+  city: Berlin
+  country: Germany
+  region: europe
+  topics:
+  - eo
+  - ai
+  url: https://agentic-eo.berlin/
+  deadline: '2026-07-31'
+- name: ECMWF 2026 Workshop on Machine Learning for Land and Hydrology
+  start: 2026-11-03
+  end: 2026-11-05
+  city: Reading
+  country: United Kingdom
+  region: europe
+  topics:
+  - eo
+  - ai
+  url: https://events.ecmwf.int/event/530/
+  deadline: '2026-06-26'
+- name: Emissions Monitoring from Space and Ground Conference 2026
+  start: 2026-11-04
+  end: 2026-11-06
+  city: Frascati
+  country: Italy
+  region: europe
+  topics:
+  - ghg
+  - methane
+  - emissions
+  - eo
+  url: https://emissionsmonitoring2026.esa.int/
+  deadline: '2026-08-31'
+- name: EO4Soil 2026 - 2nd ESA Symposium on Earth Observation for Soil Protection
+    and Restoration
+  start: 2026-11-04
+  end: 2026-11-06
+  city: Frascati
+  country: Italy
+  region: europe
+  topics:
+  - eo
+  - ghg
+  url: https://www.eo4soilsymposium2026.org/
+  deadline: '2026-08-13'
+- name: ESA EarthCODE Hackathon 2026
+  start: 2026-11-30
+  end: 2026-12-04
+  city: Frascati
+  country: Italy
+  region: europe
+  topics:
+  - eo
+  - ai
+  url: https://eo4society.esa.int/event/earthcode-hackathon-2026/
+  type: hackathon
+  deadline: '2026-10-16'
+- name: AmeriGEO Week 2026
+  start: 2026-11-30
+  end: 2026-12-04
+  city: Guatemala City
+  country: Guatemala
+  region: world
+  topics:
+  - eo
+  url: https://www.geoaquawatch.org/amerigeo-week-2026-registration-is-now-open-nov-30-december-4-2026-guatemala-city/
 - name: InGARSS 2026 (IEEE India Geoscience and Remote Sensing Symposium)
   start: 2026-12-01
   end: 2026-12-04
   city: Hyderabad
   country: India
   region: world
-  topics: [eo, ai]
+  topics:
+  - eo
+  - ai
   url: https://ingarss2026.co.in
   deadline: 2026-06-30
+- name: AGU Fall Meeting 2026
+  start: 2026-12-07
+  end: 2026-12-11
+  city: San Francisco
+  country: USA
+  region: world
+  topics:
+  - eo
+  - ghg
+  - emissions
+  - ai
+  url: https://www.agu.org/annual-meeting
+  deadline: 2026-08-05
+- name: 18th AOGEO Symposium
+  start: 2026-12-15
+  end: 2026-12-17
+  city: TBD
+  country: Japan
+  region: world
+  topics:
+  - eo
+  url: https://earthobservations.org/about-us/news/geo-community-update-june-2026
+- name: EO for Sustainable Blue Economy 2027 User Consultation Meeting
+  start: 2027-02-01
+  end: 2027-02-05
+  city: Frascati
+  country: Italy
+  region: europe
+  topics:
+  - eo
+  url: https://eo4blueeconomy27.esa.int/
+- name: NWO NAC
+  start: 2027-03-18
+  end: 2027-03-19
+  city: Leiden
+  country: the Netherlands
+  region: europe
+  topics:
+  - environmental science
+  - emissions
+  url: https://nwonac.nl/
 - name: EGU General Assembly 2027
   start: 2027-04-04
   end: 2027-04-09
   city: Vienna
   country: Austria
   region: europe
-  topics: [eo, methane, ghg, emissions, ai]
+  topics:
+  - eo
+  - methane
+  - ghg
+  - emissions
+  - ai
   url: https://www.egu.eu
 - name: IGARSS 2027 (IEEE Geoscience and Remote Sensing Symposium)
   start: 2027-07-11
@@ -30,13 +198,7 @@
   city: Reykjavík
   country: Iceland
   region: europe
-  topics: [eo, ai]
+  topics:
+  - eo
+  - ai
   url: https://www.grss-ieee.org/event/2027-ieee-international-geoscience-and-remote-sensing-symposium/
-- name: NWO NAC
-  start: 2027-03-18
-  end: 2027-03-19
-  city: Leiden
-  country: the Netherlands
-  region: europe
-  topics: [environmental science, emissions]
-  url: https://nwonac.nl/
