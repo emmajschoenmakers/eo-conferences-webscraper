@@ -32,3 +32,11 @@
   region: europe
   topics: [eo, ai]
   url: https://www.grss-ieee.org/event/2027-ieee-international-geoscience-and-remote-sensing-symposium/
+- name: NWO NAC
+  start: 2027-03-18
+  end: 2027-03-19
+  city: Leiden
+  country: the Netherlands
+  region: europe
+  topics: [environmental science, emissions]
+  url: https://nwonac.nl/
