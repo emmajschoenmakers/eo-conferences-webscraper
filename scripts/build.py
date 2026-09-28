@@ -100,7 +100,7 @@ footer{margin-top:2rem;color:var(--mute);font-size:.85rem}
 @media (max-width:560px){.ev{grid-template-columns:1fr;gap:.25rem}}
 </style></head>
 <body><main>
-<h1>Earth observation, Methane &amp; Emissions Conferences</h1>
+<h1>Earth Observation, Methane &amp; Emissions Conferences</h1>
 <p class="lead">Upcoming conferences and hackathons on Earth Observation, greenhouse gases, methane and/or emissions & AI (DL,ML, Agentic AI, Foundation Models) for the Earth system. Europe focus, plus major events worldwide.</p>
 <div class="tabs" role="tablist">
 <button role="tab" id="tab-conference" data-tab="conference" aria-selected="true">Conferences <span>__NCONF__</span></button>
