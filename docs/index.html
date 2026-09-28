@@ -10,6 +10,10 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Iowan Old St
 main{max-width:52rem;margin:0 auto;padding:2.5rem 1.25rem 4rem}
 h1{font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.15;margin:0 0 .5rem}
 .lead{color:var(--mute);margin:0 0 1.75rem;max-width:40rem}
+.tabs{display:flex;gap:1.5rem;border-bottom:1px solid var(--line);margin-bottom:1.25rem}
+.tabs button{font:600 1rem system-ui,sans-serif;background:none;border:0;border-bottom:3px solid transparent;color:var(--mute);padding:.5rem 0;margin-bottom:-1px;cursor:pointer}
+.tabs button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--acc)}
+.tabs span{font-weight:400;color:var(--mute)}
 .controls{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.25rem}
 .controls input,.controls select{font:inherit;padding:.5rem .7rem;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink)}
 .controls input{flex:1 1 14rem}
@@ -31,39 +35,48 @@ footer{margin-top:2rem;color:var(--mute);font-size:.85rem}
 <body><main>
 <h1>Earth observation, methane &amp; emissions conferences</h1>
 <p class="lead">Upcoming conferences on Earth observation, greenhouse gases, methane, emissions and machine learning for the Earth system. Europe first, plus major events worldwide.</p>
+<div class="tabs" role="tablist">
+<button role="tab" id="tab-conference" data-tab="conference" aria-selected="true">Conferences <span>4</span></button>
+<button role="tab" id="tab-hackathon" data-tab="hackathon" aria-selected="false">Hackathons <span>0</span></button>
+</div>
 <div class="controls">
 <input id="q" type="search" placeholder="Search name, city, country" aria-label="Search">
 <select id="region" aria-label="Region"><option value="">All regions</option><option value="europe">Europe</option><option value="world">Rest of world</option></select>
 <select id="topic" aria-label="Topic"><option value="">All topics</option><option value="eo">Earth observation</option><option value="methane">Methane</option><option value="ghg">Greenhouse gases</option><option value="emissions">Emissions</option><option value="ai">ML / AI</option></select>
 </div>
-<ul id="list"><li class="ev" data-region="world" data-topics="eo ai" data-search="ingarss 2026 (ieee india geoscience and remote sensing symposium) hyderabad, india eo ai">
+<ul id="list"><li class="ev" data-type="conference" data-region="world" data-topics="eo ai" data-search="ingarss 2026 (ieee india geoscience and remote sensing symposium) hyderabad, india eo ai">
   <time datetime="2026-12-01">1–4 Dec 2026</time>
   <div><h3><a href="https://ingarss2026.co.in" rel="noopener">InGARSS 2026 (IEEE India Geoscience and Remote Sensing Symposium)</a></h3>
-  <p class="place">Hyderabad, India</p><p class="tags"><span class="tag">Earth observation</span><span class="tag">ML / AI</span></p></div>
+  <p class="place">Hyderabad, India</p><p class="dl">Abstract deadline: 30 Jun 2026 (closed)</p><p class="tags"><span class="tag">Earth observation</span><span class="tag">ML / AI</span></p></div>
 </li>
-<li class="ev" data-region="world" data-topics="eo ghg emissions ai" data-search="agu fall meeting 2026 san francisco, usa eo ghg emissions ai">
+<li class="ev" data-type="conference" data-region="world" data-topics="eo ghg emissions ai" data-search="agu fall meeting 2026 san francisco, usa eo ghg emissions ai">
   <time datetime="2026-12-07">7–11 Dec 2026</time>
   <div><h3><a href="https://www.agu.org/annual-meeting" rel="noopener">AGU Fall Meeting 2026</a></h3>
-  <p class="place">San Francisco, USA</p><p class="tags"><span class="tag">Earth observation</span><span class="tag">Greenhouse gases</span><span class="tag">Emissions</span><span class="tag">ML / AI</span></p></div>
+  <p class="place">San Francisco, USA</p><p class="dl">Abstract deadline: 5 Aug 2026 (closed)</p><p class="tags"><span class="tag">Earth observation</span><span class="tag">Greenhouse gases</span><span class="tag">Emissions</span><span class="tag">ML / AI</span></p></div>
 </li>
-<li class="ev" data-region="europe" data-topics="eo methane ghg emissions ai" data-search="egu general assembly 2027 vienna, austria eo methane ghg emissions ai">
+<li class="ev" data-type="conference" data-region="europe" data-topics="eo methane ghg emissions ai" data-search="egu general assembly 2027 vienna, austria eo methane ghg emissions ai">
   <time datetime="2027-04-04">4–9 Apr 2027</time>
   <div><h3><a href="https://www.egu.eu" rel="noopener">EGU General Assembly 2027</a></h3>
-  <p class="place">Vienna, Austria</p><p class="tags"><span class="tag">Earth observation</span><span class="tag">Methane</span><span class="tag">Greenhouse gases</span><span class="tag">Emissions</span><span class="tag">ML / AI</span></p></div>
+  <p class="place">Vienna, Austria</p><p class="dl">Abstract deadline: not announced yet</p><p class="tags"><span class="tag">Earth observation</span><span class="tag">Methane</span><span class="tag">Greenhouse gases</span><span class="tag">Emissions</span><span class="tag">ML / AI</span></p></div>
 </li>
-<li class="ev" data-region="europe" data-topics="eo ai" data-search="igarss 2027 (ieee geoscience and remote sensing symposium) reykjavík, iceland eo ai">
+<li class="ev" data-type="conference" data-region="europe" data-topics="eo ai" data-search="igarss 2027 (ieee geoscience and remote sensing symposium) reykjavík, iceland eo ai">
   <time datetime="2027-07-11">11–16 Jul 2027</time>
   <div><h3><a href="https://www.grss-ieee.org/event/2027-ieee-international-geoscience-and-remote-sensing-symposium/" rel="noopener">IGARSS 2027 (IEEE Geoscience and Remote Sensing Symposium)</a></h3>
-  <p class="place">Reykjavík, Iceland</p><p class="tags"><span class="tag">Earth observation</span><span class="tag">ML / AI</span></p></div>
+  <p class="place">Reykjavík, Iceland</p><p class="dl">Abstract deadline: not announced yet</p><p class="tags"><span class="tag">Earth observation</span><span class="tag">ML / AI</span></p></div>
 </li></ul>
-<p class="empty" id="empty" hidden>No conferences match these filters.</p>
-<footer>4 upcoming events. Updated 28 Sep 2026. Past events are removed automatically.</footer>
+<p class="empty" id="empty" hidden>Nothing to show here yet.</p>
+<footer>4 upcoming events in total. Updated 28 Sep 2026. Past events are removed automatically.</footer>
 </main>
 <script>
 const q=document.getElementById('q'),r=document.getElementById('region'),t=document.getElementById('topic');
 const evs=[...document.querySelectorAll('.ev')],empty=document.getElementById('empty');
+const tabs=[...document.querySelectorAll('.tabs button')];
+let tab=location.hash==='#hackathons'?'hackathon':'conference';
 function f(){const s=q.value.trim().toLowerCase();let n=0;
-evs.forEach(e=>{const ok=(!s||e.dataset.search.includes(s))&&(!r.value||e.dataset.region===r.value)&&(!t.value||e.dataset.topics.split(' ').includes(t.value));e.hidden=!ok;if(ok)n++});
+tabs.forEach(b=>b.setAttribute('aria-selected',b.dataset.tab===tab));
+evs.forEach(e=>{const ok=e.dataset.type===tab&&(!s||e.dataset.search.includes(s))&&(!r.value||e.dataset.region===r.value)&&(!t.value||e.dataset.topics.split(' ').includes(t.value));e.hidden=!ok;if(ok)n++});
 empty.hidden=n>0}
+tabs.forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.tab;history.replaceState(null,'',tab==='hackathon'?'#hackathons':'#');f()}));
 [q,r,t].forEach(x=>x.addEventListener('input',f));
+f();
 </script></body></html>
