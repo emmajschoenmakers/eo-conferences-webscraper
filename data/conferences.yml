@@ -1,0 +1,32 @@
+- name: AGU Fall Meeting 2026
+  start: 2026-12-07
+  end: 2026-12-11
+  city: San Francisco
+  country: USA
+  region: world
+  topics: [eo, ghg, emissions, ai]
+  url: https://www.agu.org/annual-meeting
+- name: InGARSS 2026 (IEEE India Geoscience and Remote Sensing Symposium)
+  start: 2026-12-01
+  end: 2026-12-04
+  city: Hyderabad
+  country: India
+  region: world
+  topics: [eo, ai]
+  url: https://ingarss2026.co.in
+- name: EGU General Assembly 2027
+  start: 2027-04-04
+  end: 2027-04-09
+  city: Vienna
+  country: Austria
+  region: europe
+  topics: [eo, methane, ghg, emissions, ai]
+  url: https://www.egu.eu
+- name: IGARSS 2027 (IEEE Geoscience and Remote Sensing Symposium)
+  start: 2027-07-11
+  end: 2027-07-16
+  city: Reykjavík
+  country: Iceland
+  region: europe
+  topics: [eo, ai]
+  url: https://www.grss-ieee.org/event/2027-ieee-international-geoscience-and-remote-sensing-symposium/
