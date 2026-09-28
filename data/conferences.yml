@@ -6,6 +6,7 @@
   region: world
   topics: [eo, ghg, emissions, ai]
   url: https://www.agu.org/annual-meeting
+  deadline: 2026-08-05
 - name: InGARSS 2026 (IEEE India Geoscience and Remote Sensing Symposium)
   start: 2026-12-01
   end: 2026-12-04
@@ -14,6 +15,7 @@
   region: world
   topics: [eo, ai]
   url: https://ingarss2026.co.in
+  deadline: 2026-06-30
 - name: EGU General Assembly 2027
   start: 2027-04-04
   end: 2027-04-09
