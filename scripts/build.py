@@ -5,7 +5,7 @@ import pathlib
 import yaml
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-TOPICS = {"eo": "Earth observation", "methane": "Methane", "ghg": "Greenhouse gases",
+TOPICS = {"eo": "Earth Observation", "methane": "Methane", "ghg": "Greenhouse gases",
           "emissions": "Emissions", "ai": "ML / AI","FM" : "Foundation Models"}
 REGIONS = {"europe": "Europe", "world": "Rest of world"}
 e = html.escape
