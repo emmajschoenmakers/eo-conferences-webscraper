@@ -70,17 +70,6 @@
   - ai
   url: https://agentic-eo.berlin/
   deadline: '2026-07-31'
-- name: ECMWF 2026 Workshop on Machine Learning for Land and Hydrology
-  start: 2026-11-03
-  end: 2026-11-05
-  city: Reading
-  country: United Kingdom
-  region: europe
-  topics:
-  - eo
-  - ai
-  url: https://events.ecmwf.int/event/530/
-  deadline: '2026-06-26'
 - name: Emissions Monitoring from Space and Ground Conference 2026
   start: 2026-11-04
   end: 2026-11-06
