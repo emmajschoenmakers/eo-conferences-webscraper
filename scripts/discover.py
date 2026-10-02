@@ -19,8 +19,8 @@ MODEL = os.environ.get("CLAUDE_MODEL", "claude-sonnet-5")
 
 PROMPT = """Today is {today}. Use web search to find conferences, symposia, workshops, summer schools
 and hackathons starting between {today} and {horizon} on: Earth observation and remote sensing,
-methane, greenhouse gases, emissions monitoring, and machine learning / deep learning / AI applied to
-these (or to Earth science generally). Prioritise Europe, but include major events worldwide.
+methane, greenhouse gases, emissions (including aerosol and greenhouse gases) monitoring, and machine learning / deep learning / AI applied to
+these. Prioritise Europe, but include (only) major events worldwide.
 
 Search these organisations' event pages specifically, one at a time:
 WMO (World Meteorological Organization), ICOS (Integrated Carbon Observation System),
