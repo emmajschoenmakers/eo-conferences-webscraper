@@ -39,6 +39,28 @@
   - eo
   - ai
   url: https://acrs2026.in/
+- name: ESA's 2026 Biomass MAAP Hackathon
+  start: 2026-10-12
+  end: 2026-10-16
+  city: Darmstadt
+  country: Germany
+  region: europe
+  topics:
+  - eo
+  - ghg
+  url: https://eo4society.esa.int/event/esas-2026-biomass-maap-hackathon/
+  type: hackathon
+  deadline: '2026-07-31'
+- name: 2nd European Workshop on Artificial Nighttime Light Remote Sensing
+  start: 2026-10-12
+  end: 2026-10-15
+  city: Frascati
+  country: Italy
+  region: europe
+  topics:
+  - eo
+  url: https://eo4society.esa.int/event/2nd-european-workshop-on-artificial-nighttime-light-remote-sensing/
+  deadline: '2026-09-10'
 - name: International Conference on Remote Sensing and Geoinformation (RESG2026)
   start: 2026-10-15
   end: 2026-10-18
@@ -70,6 +92,26 @@
   - ai
   url: https://agentic-eo.berlin/
   deadline: '2026-07-31'
+- name: Copernicus Marine Service Hackathon 2026
+  start: 2026-10-29
+  end: 2026-10-31
+  city: Amsterdam
+  country: Netherlands
+  region: europe
+  topics:
+  - eo
+  url: https://events.marine.copernicus.eu/copernicus-marine-service-hackathon-2026
+  type: hackathon
+- name: 'DestinE: Stories from the Edge Workshop 2026'
+  start: 2026-11-02
+  end: 2026-11-03
+  city: Darmstadt
+  country: Germany
+  region: europe
+  topics:
+  - eo
+  - ai
+  url: https://www.eumetsat.int/conferences-events/current-events
 - name: ECMWF 2026 Workshop on Machine Learning for Land and Hydrology
   start: 2026-11-03
   end: 2026-11-05
@@ -94,6 +136,26 @@
   - eo
   url: https://emissionsmonitoring2026.esa.int/
   deadline: '2026-08-31'
+- name: 2nd EO4Soil Symposium – Earth Observation for Soil Protection and Restoration
+  start: 2026-11-04
+  end: 2026-11-06
+  city: Frascati
+  country: Italy
+  region: europe
+  topics:
+  - eo
+  url: https://www.eo4soilsymposium2026.org/
+  deadline: '2026-08-13'
+- name: 1st Sentinel Users Preparation Coordination Workshop
+  start: 2026-11-25
+  end: 2026-11-27
+  city: Frascati
+  country: Italy
+  region: europe
+  topics:
+  - eo
+  url: https://eo4society.esa.int/event/1st-sentinel-users-preparation-coordination-workshop/
+  deadline: '2026-10-25'
 - name: ESA EarthCODE Hackathon 2026
   start: 2026-11-30
   end: 2026-12-04
@@ -139,6 +201,17 @@
   - ai
   url: https://www.agu.org/annual-meeting
   deadline: 2026-08-05
+- name: 'NeurIPS 2026 Workshop: Tackling Climate Change with Machine Learning'
+  start: 2026-12-11
+  end: 2026-12-12
+  city: Sydney
+  country: Australia
+  region: world
+  topics:
+  - ai
+  - ghg
+  url: https://www.climatechange.ai/events/neurips2026
+  deadline: '2026-08-29'
 - name: 18th AOGEO Symposium
   start: 2026-12-15
   end: 2026-12-17
@@ -148,6 +221,48 @@
   topics:
   - eo
   url: https://earthobservations.org/about-us/news/geo-community-update-june-2026
+- name: Save the Date – ESA, EARSC & IOGP Workshop on Earth Observation for the Energy
+    Sector
+  start: 2027-01-11
+  end: 2027-01-12
+  city: Frascati
+  country: Italy
+  region: europe
+  topics:
+  - eo
+  - emissions
+  url: https://eo4society.esa.int/events/
+- name: 9th ICOS Winter School
+  start: 2027-01-18
+  end: 2027-01-28
+  city: Hyytiälä
+  country: Finland
+  region: europe
+  topics:
+  - ghg
+  url: https://www.icos-cp.eu/about/opportunities/summer-school
+  deadline: '2026-07-31'
+- name: EO for a Sustainable Blue Economy User Consultation Meeting
+  start: 2027-02-01
+  end: 2027-02-05
+  city: Frascati
+  country: Italy
+  region: europe
+  topics:
+  - eo
+  url: https://eo4blueeconomy27.esa.int/
+  deadline: '2026-11-01'
+- name: '6th Space for Water Cycle and Hydrology Workshop: HYDROSPACE 2027'
+  start: 2027-03-01
+  end: 2027-03-05
+  city: Toulouse
+  country: France
+  region: europe
+  topics:
+  - eo
+  - ai
+  url: https://www.hydrospace2027.org/
+  deadline: '2026-11-03'
 - name: NWO NAC
   start: 2027-03-18
   end: 2027-03-19
@@ -181,3 +296,12 @@
   - eo
   - ai
   url: https://www.grss-ieee.org/event/2027-ieee-international-geoscience-and-remote-sensing-symposium/
+- name: EUMETSAT Meteorological Satellite Conference 2027
+  start: 2027-09-20
+  end: 2027-09-24
+  city: Lisbon
+  country: Portugal
+  region: europe
+  topics:
+  - eo
+  url: https://www.eumetsat.int/
