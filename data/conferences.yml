@@ -18,17 +18,6 @@
   - eo
   - ai
   url: https://earthobservations.org/about-us/news/10th-afrigeo-symposium-registration-now-open
-- name: Open-Earth-Monitor Cyberinfrastructure (OEMC) Global Workshop 2026
-  start: 2026-10-07
-  end: 2026-10-09
-  city: Barcelona
-  country: Spain
-  region: europe
-  topics:
-  - eo
-  - ai
-  url: https://earthmonitor.org/global-workshop-2026/
-  deadline: '2026-04-01'
 - name: 47th Asian Conference on Remote Sensing (ACRS 2026)
   start: 2026-10-12
   end: 2026-10-16
@@ -51,16 +40,6 @@
   url: https://eo4society.esa.int/event/esas-2026-biomass-maap-hackathon/
   type: hackathon
   deadline: '2026-07-31'
-- name: 2nd European Workshop on Artificial Nighttime Light Remote Sensing
-  start: 2026-10-12
-  end: 2026-10-15
-  city: Frascati
-  country: Italy
-  region: europe
-  topics:
-  - eo
-  url: https://eo4society.esa.int/event/2nd-european-workshop-on-artificial-nighttime-light-remote-sensing/
-  deadline: '2026-09-10'
 - name: International Conference on Remote Sensing and Geoinformation (RESG2026)
   start: 2026-10-15
   end: 2026-10-18
@@ -72,15 +51,6 @@
   - ghg
   url: https://www.elsevier.com/en-xs/events/conferences/all/remote-sensing-and-geoinformation
   deadline: '2026-04-24'
-- name: ISPRS STEP Summer School (at ACRS 2026)
-  start: 2026-10-17
-  end: 2026-10-21
-  city: New Delhi
-  country: India
-  region: world
-  topics:
-  - eo
-  url: https://acrs2026.in/summer-school.html
 - name: Agentic AI for Earth Observation Workshop
   start: 2026-10-19
   end: 2026-10-21
@@ -92,37 +62,6 @@
   - ai
   url: https://agentic-eo.berlin/
   deadline: '2026-07-31'
-- name: Copernicus Marine Service Hackathon 2026
-  start: 2026-10-29
-  end: 2026-10-31
-  city: Amsterdam
-  country: Netherlands
-  region: europe
-  topics:
-  - eo
-  url: https://events.marine.copernicus.eu/copernicus-marine-service-hackathon-2026
-  type: hackathon
-- name: 'DestinE: Stories from the Edge Workshop 2026'
-  start: 2026-11-02
-  end: 2026-11-03
-  city: Darmstadt
-  country: Germany
-  region: europe
-  topics:
-  - eo
-  - ai
-  url: https://www.eumetsat.int/conferences-events/current-events
-- name: ECMWF 2026 Workshop on Machine Learning for Land and Hydrology
-  start: 2026-11-03
-  end: 2026-11-05
-  city: Reading
-  country: United Kingdom
-  region: europe
-  topics:
-  - eo
-  - ai
-  url: https://events.ecmwf.int/event/530/
-  deadline: '2026-06-26'
 - name: Emissions Monitoring from Space and Ground Conference 2026
   start: 2026-11-04
   end: 2026-11-06
@@ -136,16 +75,6 @@
   - eo
   url: https://emissionsmonitoring2026.esa.int/
   deadline: '2026-08-31'
-- name: 2nd EO4Soil Symposium – Earth Observation for Soil Protection and Restoration
-  start: 2026-11-04
-  end: 2026-11-06
-  city: Frascati
-  country: Italy
-  region: europe
-  topics:
-  - eo
-  url: https://www.eo4soilsymposium2026.org/
-  deadline: '2026-08-13'
 - name: 1st Sentinel Users Preparation Coordination Workshop
   start: 2026-11-25
   end: 2026-11-27
@@ -212,15 +141,6 @@
   - ghg
   url: https://www.climatechange.ai/events/neurips2026
   deadline: '2026-08-29'
-- name: 18th AOGEO Symposium
-  start: 2026-12-15
-  end: 2026-12-17
-  city: TBD
-  country: Japan
-  region: world
-  topics:
-  - eo
-  url: https://earthobservations.org/about-us/news/geo-community-update-june-2026
 - name: Save the Date – ESA, EARSC & IOGP Workshop on Earth Observation for the Energy
     Sector
   start: 2027-01-11
@@ -242,27 +162,6 @@
   - ghg
   url: https://www.icos-cp.eu/about/opportunities/summer-school
   deadline: '2026-07-31'
-- name: EO for a Sustainable Blue Economy User Consultation Meeting
-  start: 2027-02-01
-  end: 2027-02-05
-  city: Frascati
-  country: Italy
-  region: europe
-  topics:
-  - eo
-  url: https://eo4blueeconomy27.esa.int/
-  deadline: '2026-11-01'
-- name: '6th Space for Water Cycle and Hydrology Workshop: HYDROSPACE 2027'
-  start: 2027-03-01
-  end: 2027-03-05
-  city: Toulouse
-  country: France
-  region: europe
-  topics:
-  - eo
-  - ai
-  url: https://www.hydrospace2027.org/
-  deadline: '2026-11-03'
 - name: NWO NAC
   start: 2027-03-18
   end: 2027-03-19
