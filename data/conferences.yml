@@ -62,6 +62,17 @@
   - ai
   url: https://agentic-eo.berlin/
   deadline: '2026-07-31'
+- name: 2026 Workshop on Machine Learning for Land and Hydrology
+  start: 2026-11-03
+  end: 2026-11-05
+  city: Reading
+  country: United Kingdom
+  region: europe
+  topics:
+  - ai
+  - eo
+  url: https://events.ecmwf.int/event/530/
+  deadline: '2026-06-26'
 - name: Emissions Monitoring from Space and Ground Conference 2026
   start: 2026-11-04
   end: 2026-11-06
@@ -75,6 +86,46 @@
   - eo
   url: https://emissionsmonitoring2026.esa.int/
   deadline: '2026-08-31'
+- name: 2nd EO4Soil Symposium – Earth Observation for Soil Protection and Restoration
+  start: 2026-11-04
+  end: 2026-11-06
+  city: Frascati
+  country: Italy
+  region: europe
+  topics:
+  - eo
+  url: https://eo4society.esa.int/event/2nd-eo4soil-symposium-earth-observation-for-soil-protection-and-restoration/
+  deadline: '2026-08-13'
+- name: NWP-SAF Workshop on Exploiting Satellite Cloud and Precipitation Observations
+    for Weather Forecasting
+  start: 2026-11-09
+  end: 2026-11-12
+  city: Reading
+  country: United Kingdom
+  region: europe
+  topics:
+  - eo
+  url: https://www.ecmwf.int/en/about/what-we-do/calendar
+- name: NASA Space Apps Challenge 2026
+  start: 2026-11-14
+  end: 2026-11-15
+  city: Various (global local events)
+  country: Various
+  region: world
+  topics:
+  - eo
+  - ai
+  url: https://www.spaceappschallenge.org/
+  type: hackathon
+- name: 'ECMWF Training Course: Machine Learning-based Weather Forecasting'
+  start: 2026-11-16
+  end: 2026-11-20
+  city: Reading
+  country: United Kingdom
+  region: europe
+  topics:
+  - ai
+  url: https://www.ecmwf.int/en/about/what-we-do/calendar
 - name: 1st Sentinel Users Preparation Coordination Workshop
   start: 2026-11-25
   end: 2026-11-27
@@ -141,6 +192,17 @@
   - ghg
   url: https://www.climatechange.ai/events/neurips2026
   deadline: '2026-08-29'
+- name: AMS 107th Annual Meeting
+  start: 2027-01-10
+  end: 2027-01-14
+  city: Denver
+  country: United States
+  region: world
+  topics:
+  - ai
+  - eo
+  - ghg
+  url: https://annual.ametsoc.org/2027/
 - name: Save the Date – ESA, EARSC & IOGP Workshop on Earth Observation for the Energy
     Sector
   start: 2027-01-11
@@ -152,6 +214,16 @@
   - eo
   - emissions
   url: https://eo4society.esa.int/events/
+- name: 'ECMWF Training Course: Data Assimilation & Machine Learning'
+  start: 2027-01-11
+  end: 2027-01-15
+  city: Reading
+  country: United Kingdom
+  region: europe
+  topics:
+  - ai
+  url: https://events.ecmwf.int/event/578/
+  deadline: '2026-09-27'
 - name: 9th ICOS Winter School
   start: 2027-01-18
   end: 2027-01-28
@@ -162,6 +234,53 @@
   - ghg
   url: https://www.icos-cp.eu/about/opportunities/summer-school
   deadline: '2026-07-31'
+- name: 'Training Course: EUMETSAT/ECMWF NWP-SAF Satellite Data Assimilation'
+  start: 2027-01-18
+  end: 2027-01-22
+  city: Reading
+  country: United Kingdom
+  region: europe
+  topics:
+  - eo
+  - ai
+  url: https://www.ecmwf.int/en/about/media-centre/news/2026/january-2027-training-courses
+- name: 'ECMWF Training Course: Use and Interpretation of ECMWF Products'
+  start: 2027-01-25
+  end: 2027-01-28
+  city: Reading
+  country: United Kingdom
+  region: europe
+  topics:
+  - ai
+  url: https://events.ecmwf.int/event/576/
+- name: Formation EO AFRICA R&D Facility à Dakar
+  start: 2027-02-01
+  end: 2027-02-05
+  city: Dakar
+  country: Senegal
+  region: world
+  topics:
+  - eo
+  url: https://eo4society.esa.int/training-education/
+- name: International Workshop on High-Resolution Thermal EO
+  start: 2027-02-09
+  end: 2027-02-12
+  city: Frascati
+  country: Italy
+  region: europe
+  topics:
+  - eo
+  url: https://thermal2027.esa.int/
+- name: Methane Mitigation Europe Summit 2027
+  start: 2027-03-16
+  end: 2027-03-18
+  city: Amsterdam
+  country: Netherlands
+  region: europe
+  topics:
+  - methane
+  - emissions
+  url: https://www.industrialdecarbonizationnetwork.com/events-methane-mitigation-europe
 - name: NWO NAC
   start: 2027-03-18
   end: 2027-03-19
@@ -185,6 +304,26 @@
   - emissions
   - ai
   url: https://www.egu.eu
+- name: BIOMASS Science and Validation Workshop 2027
+  start: 2027-04-12
+  end: 2027-04-16
+  city: Edinburgh
+  country: United Kingdom
+  region: europe
+  topics:
+  - eo
+  - ghg
+  url: https://eo4society.esa.int/event/biomass-science-and-validation-workshop-2027/
+- name: 'Methane Mitigation: Technology & Innovation World Summit 2027'
+  start: 2027-06-08
+  end: 2027-06-10
+  city: Texas
+  country: United States
+  region: world
+  topics:
+  - methane
+  - emissions
+  url: https://www.industrialdecarbonizationnetwork.com/events-methane-tech-and-innovation
 - name: IGARSS 2027 (IEEE Geoscience and Remote Sensing Symposium)
   start: 2027-07-11
   end: 2027-07-16
@@ -204,3 +343,25 @@
   topics:
   - eo
   url: https://www.eumetsat.int/
+- name: CEM 2027 – International Conference and Exhibition on Emissions Monitoring
+    and Air Quality
+  start: 2027-09-21
+  end: 2027-09-23
+  city: Dublin
+  country: Ireland
+  region: europe
+  topics:
+  - emissions
+  - methane
+  url: https://www.ilmexhibitions.com/cem/
+- name: IMMC 2027 – 6th Industrial Methane Measurement Conference
+  start: 2027-09-21
+  end: 2027-09-23
+  city: Dublin
+  country: Ireland
+  region: europe
+  topics:
+  - methane
+  - emissions
+  - ai
+  url: https://www.ilmexhibitions.com/methane/
