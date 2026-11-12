@@ -327,7 +327,8 @@
   topics:
   - eo
   - ghg
-  url: https://eo4society.esa.int/event/biomass-science-and-validation-workshop-2027/
+  url: https://biomass-science-validation2027.esa.int/
+  deadline: '2026-12-31'
 - name: 'Methane Mitigation: Technology & Innovation World Summit 2027'
   start: 2027-06-08
   end: 2027-06-10
