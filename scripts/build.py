@@ -38,7 +38,7 @@ def fmt_dates(s, en):
 
 
 def deadline_line(c):
-    label = "Registration deadline" if c.get("type") == "hackathon" else "Abstract deadline"
+    label = "Registration deadline" if c.get("type") in {"hackathon", "training"} else "Abstract deadline"
     d = c.get("deadline")
     if not d:
         return f'<p class="dl">{label}: not announced yet</p>'
@@ -68,7 +68,7 @@ def row(c):
 PAGE = """<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Earth Observation &amp; Emissions Conferences</title>
+<title>Earth Observation &amp; Emissions Events</title>
 <style>
 :root{--bg:#eef2f5;--ink:#14212b;--mute:#586773;--line:#cbd5dc;--card:#fff;--acc:#0b6e79;--hot:#c2410c}
 @media (prefers-color-scheme:dark){:root{--bg:#0f1a21;--ink:#e6edf1;--mute:#93a3ae;--line:#26363f;--card:#16252e;--acc:#5cc2cc;--hot:#fb923c}}
@@ -100,11 +100,12 @@ footer{margin-top:2rem;color:var(--mute);font-size:.85rem}
 @media (max-width:560px){.ev{grid-template-columns:1fr;gap:.25rem}}
 </style></head>
 <body><main>
-<h1>Earth Observation, Methane &amp; Emissions Conferences</h1>
-<p class="lead">Upcoming conferences and hackathons on Earth Observation, greenhouse gases, methane and/or emissions & AI (DL,ML, Agentic AI, Foundation Models) for the Earth system. Europe focus, plus major events worldwide.</p>
+<h1>Earth Observation, Methane &amp; Emissions Events</h1>
+<p class="lead">Upcoming conferences, hackathons and training courses on Earth Observation, greenhouse gases, methane and/or emissions & AI (DL,ML, Agentic AI, Foundation Models) for the Earth system. Europe focus, plus major events worldwide.</p>
 <div class="tabs" role="tablist">
 <button role="tab" id="tab-conference" data-tab="conference" aria-selected="true">Conferences <span>__NCONF__</span></button>
 <button role="tab" id="tab-hackathon" data-tab="hackathon" aria-selected="false">Hackathons <span>__NHACK__</span></button>
+<button role="tab" id="tab-training" data-tab="training" aria-selected="false">Training courses <span>__NTRAIN__</span></button>
 </div>
 <div class="controls">
 <input id="q" type="search" placeholder="Search name, city, country" aria-label="Search">
@@ -119,12 +120,12 @@ footer{margin-top:2rem;color:var(--mute);font-size:.85rem}
 const q=document.getElementById('q'),r=document.getElementById('region'),t=document.getElementById('topic');
 const evs=[...document.querySelectorAll('.ev')],empty=document.getElementById('empty');
 const tabs=[...document.querySelectorAll('.tabs button')];
-let tab=location.hash==='#hackathons'?'hackathon':'conference';
+let tab=location.hash==='#hackathons'?'hackathon':location.hash==='#training'?'training':'conference';
 function f(){const s=q.value.trim().toLowerCase();let n=0;
 tabs.forEach(b=>b.setAttribute('aria-selected',b.dataset.tab===tab));
 evs.forEach(e=>{const ok=e.dataset.type===tab&&(!s||e.dataset.search.includes(s))&&(!r.value||e.dataset.region===r.value)&&(!t.value||e.dataset.topics.split(' ').includes(t.value));e.hidden=!ok;if(ok)n++});
 empty.hidden=n>0}
-tabs.forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.tab;history.replaceState(null,'',tab==='hackathon'?'#hackathons':'#');f()}));
+tabs.forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.tab;history.replaceState(null,'',tab==='hackathon'?'#hackathons':tab==='training'?'#training':'#');f()}));
 [q,r,t].forEach(x=>x.addEventListener('input',f));
 f();
 </script></body></html>"""
@@ -139,8 +140,9 @@ def main():
     page = (PAGE.replace("__REGIONS__", opts(REGIONS)).replace("__TOPICS__", opts(TOPICS))
             .replace("__ROWS__", "\n".join(row(c) for c in items))
             .replace("__COUNT__", str(len(items)))
-            .replace("__NCONF__", str(sum(c.get("type", "conference") != "hackathon" for c in items)))
+            .replace("__NCONF__", str(sum(c.get("type", "conference") == "conference" for c in items)))
             .replace("__NHACK__", str(sum(c.get("type") == "hackathon" for c in items)))
+            .replace("__NTRAIN__", str(sum(c.get("type") == "training" for c in items)))
             .replace("__TODAY__", f"{dt.date.today():%d %b %Y}"))
     out = ROOT / "docs"
     out.mkdir(exist_ok=True)

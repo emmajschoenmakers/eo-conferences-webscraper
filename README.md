@@ -22,7 +22,7 @@ Without the API key the site still updates monthly; you just add events by hand.
 
 ## Entry format
 ```yaml
-- name: Conference name
+- name: Event name
   start: 2027-04-04
   end: 2027-04-09
   city: Vienna
@@ -30,6 +30,7 @@ Without the API key the site still updates monthly; you just add events by hand.
   region: europe        # europe | world
   topics: [eo, methane, ghg, emissions, ai]
   url: https://example.org
+  type: training       # optional: conference (default) | hackathon | training
   deadline: 2026-12-01  # optional
   note: Optional short note
 ```
