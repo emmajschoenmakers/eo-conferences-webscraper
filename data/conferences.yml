@@ -282,6 +282,7 @@
   topics:
   - eo
   url: https://thermal2027.esa.int/
+  deadline: '2026-11-10'
 - name: Methane Mitigation Europe Summit 2027
   start: 2027-03-16
   end: 2027-03-18
