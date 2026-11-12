@@ -347,7 +347,7 @@
   - eo
   - ai
   url: https://2027.ieeeigarss.org/
-  deadline:'2027-01-11'
+  deadline: '2027-01-11'
 - name: EUMETSAT Meteorological Satellite Conference 2027
   start: 2027-09-20
   end: 2027-09-24
