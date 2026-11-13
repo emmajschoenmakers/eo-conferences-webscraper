@@ -283,6 +283,20 @@
   - eo
   url: https://thermal2027.esa.int/
   deadline: '2026-11-10'
+- name: 7th iLEAPS Open Science Conference 2027
+  start: 2027-03-01
+  end: 2027-03-05
+  city: Hiroshima
+  country: Japan
+  region: asia
+  topics:
+  - methane
+  - emissions
+  - environmental science
+  - ghg
+  - earth observation
+  url: https://biz.knt.co.jp/ileaps2027/
+  deadline: '2026-12-23'
 - name: Methane Mitigation Europe Summit 2027
   start: 2027-03-16
   end: 2027-03-18
