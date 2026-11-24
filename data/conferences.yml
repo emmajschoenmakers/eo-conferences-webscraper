@@ -9,6 +9,18 @@
   url: https://www.esa.int/Education/ESA_Academy/Apply_for_Earth_Observation_Satellite_Systems_Design_Training
   deadline: '2026-06-21'
   type: training
+- name: WMO-IG3IS Expert and User Consultation on Facility-Scale Methane and the Global Methane Forum 2027
+  start: 2026-04-28
+  end: 2026-04-30
+  city: Geneva
+  country: Switzerland
+  region: europe
+  topics:
+  - emissions
+  - methane
+  - ghg
+  url: https://ig3is.wmo.int/events/wmo-ig3is-expert-and-user-consultation-facility-scale-methane-and-global-methane-forum-joint-event
+  deadline: '2027-01-15'
 - name: 10th AfriGEO Symposium
   start: 2026-10-05
   end: 2026-10-08
