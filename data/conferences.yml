@@ -52,6 +52,29 @@
   - ghg
   url: https://www.elsevier.com/en-xs/events/conferences/all/remote-sensing-and-geoinformation
   deadline: '2026-04-24'
+- name: WMO-IG3IS Expert and User Consultation on Facility-Scale Methane and the Global Methane Forum 2027
+  start: 2027-04-29
+  end: 2027-04-30
+  city: Geneva
+  country: Switzerland
+  region: europe
+  topics:
+  - emissions
+  - methane
+  - ghg
+  url: https://ig3is.wmo.int/events/wmo-ig3is-expert-and-user-consultation-facility-scale-methane-and-global-methane-forum-joint-event
+  deadline: '2027-01-15'
+- name: WMO Global Methane Forum 2027
+  start: 2027-04-27
+  end: 2027-04-29
+  city: Geneva
+  country: Switzerland
+  region: europe
+  topics:
+  - emissions
+  - methane
+  - ghg
+  url: https://ig3is.wmo.int/events/wmo-ig3is-expert-and-user-consultation-facility-scale-methane-and-global-methane-forum-joint-event
 - name: Agentic AI for Earth Observation Workshop
   start: 2026-10-19
   end: 2026-10-21
